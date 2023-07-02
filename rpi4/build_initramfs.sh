@@ -20,10 +20,11 @@ busybox mount -t devtmpfs none /dev
 
 busybox modprobe virtio-net
 busybox modprobe bochs
-busybox modprobe btintel
-busybox modprobe btusb
-busybox modprobe bluetooth
-busybox modprobe rfcomm
+
+# busybox modprobe btintel
+# busybox modprobe btusb
+# busybox modprobe bluetooth
+# busybox modprobe rfcomm
 
 busybox mount -o rw /dev/vda /mnt || exit 1
 
