@@ -5,3 +5,4 @@ initrd/
 Image.gz
 initrd.gz
 rootfs.qcow2
+rootfs0.qcow2

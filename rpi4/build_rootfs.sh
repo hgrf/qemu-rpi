@@ -21,6 +21,7 @@ sudo bash -c 'echo "qtxrpi:\$6\$ilLSZJZDTN1yzr83\$TYMW.FYa5gZrQd0x4eSU6l.WbC.qhg
 sudo touch mnt/boot/ssh
 sudo umount ./mnt
 sudo chmod a+r ${dev}p2
-qemu-img convert -O qcow2 ${dev}p2 rootfs.qcow2
+qemu-img convert -O qcow2 ${dev}p2 rootfs0.qcow2
+qemu-img create -f qcow2 -o backing_file=rootfs0.qcow2 -o backing_fmt=qcow2 rootfs.qcow2
 sudo losetup -d $dev
 rm source.img; rmdir mnt

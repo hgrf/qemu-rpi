@@ -33,7 +33,7 @@ rootfs:
 
 .PHONY: docker
 docker:
-	cd docker && docker build -t qemu-rpi4 ..
+	docker build -t qemu-rpi4 .
 
 .PHONY: run
 run:
