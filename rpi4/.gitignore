@@ -1,0 +1,7 @@
+build/
+cross-pi-gcc-*/
+initrd/
+
+Image.gz
+initrd.gz
+rootfs.qcow2
