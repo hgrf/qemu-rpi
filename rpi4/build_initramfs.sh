@@ -18,6 +18,7 @@ busybox mount -t proc none /proc
 busybox mount -t sysfs none /sys
 busybox mount -t devtmpfs none /dev
 
+busybox modprobe virtio-rng
 busybox modprobe virtio-net
 busybox modprobe bochs
 

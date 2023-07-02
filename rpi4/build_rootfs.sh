@@ -12,7 +12,7 @@ sudo resize2fs ${dev}p2
 sudo mount ${dev}p2 ./mnt -o rw
 sudo sed '/^PARTUUID/d' -i ./mnt/etc/fstab
 #sudo sed '/^root:/ s|\*||' -i ./mnt/etc/shadow
-remove_services=rpi-eeprom-update,hciuart,dphys-swapfile
+remove_services=rpi-eeprom-update,hciuart,dphys-swapfile,rng-tools-debian
 sudo bash -c "rm -f \
         ./mnt/etc/systemd/system/multi-user.target.wants/{$remove_services}.service \
         ./mnt/etc/rc?.d/?01{$remove_services}"
