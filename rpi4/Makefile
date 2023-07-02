@@ -39,3 +39,9 @@ docker:
 run:
 	# X forwarding not yet operational without sudo
 	sudo docker run --rm -it -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix qemu-rpi4 /run_qemu.sh
+
+.PHONY: push
+push:
+	docker login ghcr.io -u hgrf
+	docker tag qemu-rpi4:latest ghcr.io/hgrf/qemu-rpi4:latest
+	docker push ghcr.io/hgrf/qemu-rpi4:latest
