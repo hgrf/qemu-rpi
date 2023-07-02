@@ -40,6 +40,10 @@ run:
 	# X forwarding not yet operational without sudo
 	sudo docker run --rm -it -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix qemu-rpi4 /run_qemu.sh
 
+.PHONY: run-nographic
+run-nographic:
+	docker run --rm -it -p 127.0.0.1:8022:8022/tcp qemu-rpi4 /run_qemu_nographic.sh	
+
 .PHONY: push
 push:
 	docker login ghcr.io -u hgrf
