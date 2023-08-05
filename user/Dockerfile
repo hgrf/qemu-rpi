@@ -16,8 +16,7 @@ RUN apt update && \
 COPY build-rootfs.sh /usr/bin/build-rootfs.sh
 
 RUN /usr/bin/build-rootfs.sh && \
-    cp /usr/bin/qemu-aarch64-static /opt/qemu-rpi/sysroot/usr/bin/ && \
-    update-binfmts --enable qemu-aarch64
+    cp /usr/bin/qemu-aarch64-static /opt/qemu-rpi/sysroot/usr/bin/
 
 COPY chroot-helper.sh /usr/bin/chroot-helper.sh
 
