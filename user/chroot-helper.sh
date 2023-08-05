@@ -8,4 +8,4 @@ mount --bind /dev ${RPI_ROOTFS_BASE}/dev
 mount --bind /dev/pts ${RPI_ROOTFS_BASE}/dev/pts
 mount --bind /tmp ${RPI_ROOTFS_BASE}/tmp
 
-/usr/sbin/chroot /opt/qemu-rpi/sysroot /usr/bin/qemu-aarch64-static /bin/bash
+/usr/sbin/chroot /opt/qemu-rpi/sysroot /usr/bin/qemu-aarch64-static /bin/bash $@
