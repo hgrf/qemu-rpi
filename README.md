@@ -1,4 +1,18 @@
-## Raspberry Pi 2 Emulation with versatilepb kernel
+## Raspberry Pi 2 Emulation
+
+### with versatilepb kernel
+
+TODO
+
+### with Raspbian kernel
+
+```sh
+cd rpi2
+make download
+make kernel
+make resize
+make run
+```
 
 ### References
 
