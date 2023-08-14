@@ -20,7 +20,7 @@ make run
 - https://hackernoon.com/raspberry-pi-cluster-emulation-with-docker-compose-xo3l3tyw
 - https://stackoverflow.com/questions/28880833/how-to-emulate-the-raspberry-pi-2-on-qemu/45814913#45814913
 
-## Raspberry Pi 4 Emulation 
+## Raspberry Pi 4 Emulation
 
 ### Setup
 
@@ -42,7 +42,22 @@ make run
 - https://rs1.es/tutorials/2021/10/29/x11-forwarding-docker.html#without-ssh
 - https://stackoverflow.com/questions/44429394/x11-forwarding-of-a-gui-app-running-in-docker
 
-#### EFI
+## Raspberry Pi 4 Emulation with EFI
+
+```sh
+cd rpi4
+make toolchain
+make kernel
+make busybox
+make initrd
+make rootfs
+cd ../rpi4-efi
+make download
+make grub
+make run
+```
+
+### References
 
 - https://docs.kernel.org/admin-guide/efi-stub.html
 - https://forums.raspberrypi.com/viewtopic.php?t=306511
