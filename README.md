@@ -1,10 +1,12 @@
-## Raspberry Pi 2 Emulation
+## Raspberry Pi 1 Emulation with versatilepb Kernel
 
-### with versatilepb kernel
+```
+cd rpi1
+make docker
+make run
+```
 
-TODO
-
-### with Raspbian kernel
+## Raspberry Pi 2 Emulation with Raspbian kernel
 
 ```sh
 cd rpi2
